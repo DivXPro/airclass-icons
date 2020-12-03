@@ -1,12 +1,12 @@
 {
-  "name": "@ant-design/icons-svg",
-  "version": "4.1.0",
+  "name": "@airclass/icons-svg",
+  "version": "4.1.2",
   "sideEffects": false,
   "description": "Abstract nodes for ant design icons.",
   "contributors": [
     "HeskeyBaozi <hezhiyu233@foxmail.com>"
   ],
-  "homepage": "https://github.com/ant-design/ant-design-icons/",
+  "homepage": "https://github.com/divxpro/icons-svg/",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ant-design/ant-design-icons.git"
+    "url": "git+https://github.com/divxpro/icons-svg.git"
   },
   "scripts": {
     "g": "npm run generate",
@@ -31,9 +31,6 @@
     "test:unit": "jest",
     "prepublishOnly": "npm run test && npm run g && npm run build && npm run type-check && npm run digest",
     "digest": "node scripts/digest.js"
-  },
-  "bugs": {
-    "url": "https://github.com/ant-design/ant-design-icons/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",

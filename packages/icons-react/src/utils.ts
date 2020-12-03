@@ -1,4 +1,4 @@
-import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { AbstractNode, IconDefinition } from '@airclass/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import React, { useEffect } from 'react';
 import warn from 'rc-util/lib/warning';

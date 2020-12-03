@@ -1,5 +1,5 @@
 import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
-import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { AbstractNode, IconDefinition } from '@airclass/icons-svg/lib/types';
 import { CSSProperties, SetupContext } from 'vue';
 
 export interface IconProps {

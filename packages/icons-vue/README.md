@@ -12,7 +12,7 @@ Ant Design Icons for Vue
 ## Install
 
 ```bash
-yarn add @ant-design/icons-vue
+yarn add @airclass/icons-vue
 ```
 
 ## Basic Usage
@@ -21,7 +21,7 @@ First, you should add the icons that you need into the library.
 
 ```js
 import Vue from 'vue'
-import { Filter } from '@ant-design/icons-vue';
+import { Filter } from '@airclass/icons-vue';
 Vue.component(Filter.name, Filter);
 ```
 

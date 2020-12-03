@@ -36,63 +36,389 @@ export default series(
     }),
 
     // 2.2 generate abstract node with the theme "filled"
-    generateIcons({
-      theme: 'filled',
-      from: ['svg/filled/*.svg'],
-      toDir: 'src/asn',
-      svgoConfig: generalConfig,
-      extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' }),
-        adjustViewBox
-      ],
-      stringify: JSON.stringify,
-      template: iconTemplate,
-      mapToInterpolate: ({ name, content }) => ({
-        identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
-        content
-      }),
-      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
-    }),
+    // generateIcons({
+    //   theme: 'filled',
+    //   from: ['svg/filled/*.svg'],
+    //   toDir: 'src/asn',
+    //   svgoConfig: generalConfig,
+    //   extraNodeTransformFactories: [
+    //     assignAttrsAtTag('svg', { focusable: 'false' }),
+    //     adjustViewBox
+    //   ],
+    //   stringify: JSON.stringify,
+    //   template: iconTemplate,
+    //   mapToInterpolate: ({ name, content }) => ({
+    //     identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
+    //     content
+    //   }),
+    //   filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
+    // }),
 
     // 2.2 generate abstract node with the theme "outlined"
-    generateIcons({
-      theme: 'outlined',
-      from: ['svg/outlined/*.svg'],
-      toDir: 'src/asn',
-      svgoConfig: generalConfig,
-      extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' }),
-        adjustViewBox
-      ],
-      stringify: JSON.stringify,
-      template: iconTemplate,
-      mapToInterpolate: ({ name, content }) => ({
-        identifier: getIdentifier({ name, themeSuffix: 'Outlined' }),
-        content
-      }),
-      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
-    }),
+    // generateIcons({
+    //   theme: 'outlined',
+    //   from: ['svg/outlined/*.svg'],
+    //   toDir: 'src/asn',
+    //   svgoConfig: generalConfig,
+    //   extraNodeTransformFactories: [
+    //     assignAttrsAtTag('svg', { focusable: 'false' }),
+    //     adjustViewBox
+    //   ],
+    //   stringify: JSON.stringify,
+    //   template: iconTemplate,
+    //   mapToInterpolate: ({ name, content }) => ({
+    //     identifier: getIdentifier({ name, themeSuffix: 'Outlined' }),
+    //     content
+    //   }),
+    //   filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
+    // }),
 
     // 2.3 generate abstract node with the theme "outlined"
+    // generateIcons({
+    //   theme: 'twotone',
+    //   from: ['svg/twotone/*.svg'],
+    //   toDir: 'src/asn',
+    //   svgoConfig: remainFillConfig,
+    //   extraNodeTransformFactories: [
+    //     assignAttrsAtTag('svg', { focusable: 'false' }),
+    //     adjustViewBox,
+    //     setDefaultColorAtPathTag('#333')
+    //   ],
+    //   stringify: twotoneStringify,
+    //   template: iconTemplate,
+    //   mapToInterpolate: ({ name, content }) => ({
+    //     identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
+    //     content
+    //   }),
+    //   filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
+    // }),
+
+    // 2.3 generate abstract node with the theme "remix"
     generateIcons({
-      theme: 'twotone',
-      from: ['svg/twotone/*.svg'],
+      theme: 'Buildings',
+      from: ['svg/Buildings/*.svg'],
       toDir: 'src/asn',
       svgoConfig: remainFillConfig,
       extraNodeTransformFactories: [
         assignAttrsAtTag('svg', { focusable: 'false' }),
         adjustViewBox,
-        setDefaultColorAtPathTag('#333')
       ],
-      stringify: twotoneStringify,
+      stringify: JSON.stringify,
       template: iconTemplate,
       mapToInterpolate: ({ name, content }) => ({
-        identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
+        identifier: getIdentifier({ name, themeSuffix: '' }),
         content
       }),
-      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
-    })
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Business',
+      from: ['svg/Business/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Communication',
+      from: ['svg/Communication/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Design',
+      from: ['svg/Design/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Development',
+      from: ['svg/Development/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Device',
+      from: ['svg/Device/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Document',
+      from: ['svg/Document/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Editor',
+      from: ['svg/Editor/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Finance',
+      from: ['svg/Finance/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Health',
+      from: ['svg/Health/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Health',
+      from: ['svg/Health/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Logos',
+      from: ['svg/Logos/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Map',
+      from: ['svg/Map/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Media',
+      from: ['svg/Media/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Others',
+      from: ['svg/Others/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'System',
+      from: ['svg/System/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'User',
+      from: ['svg/User/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
+
+    generateIcons({
+      theme: 'Weather',
+      from: ['svg/Weather/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: remainFillConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: '' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: '' })
+    }),
   ),
+  
   parallel(
     // 3.1 generate entry file: src/index.ts
     generateEntry({

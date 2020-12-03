@@ -1,5 +1,5 @@
 import { nextTick, h } from 'vue';
-import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { AbstractNode, IconDefinition } from '@airclass/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import insertCss from './insert-css';
 

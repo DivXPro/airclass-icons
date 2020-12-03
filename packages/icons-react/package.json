@@ -1,6 +1,6 @@
 {
-  "name": "@ant-design/icons",
-  "version": "4.3.0",
+  "name": "@airclass/icons",
+  "version": "4.3.4",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "unpkg": "./dist/index.umd.js",
@@ -26,9 +26,9 @@
     "test": "father test",
     "ci": "NODE_ENV=ci npm run prepublishOnly",
     "test:local": "npm run generate && npm run compile && npm run test",
-    "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
-    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
+    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
+    "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit"
   },
   "peerDependencies": {
     "react": ">=16.0.0"
@@ -49,6 +49,7 @@
     "enzyme-to-json": "^3.3.5",
     "eslint": "^7.1.0",
     "father": "^2.29.11",
+    "increase-memory-limit": "^1.0.7",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
     "mobx-react": "^6.1.3",
@@ -60,6 +61,7 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@airclass/icons-svg": "^4.1.2",
     "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
     "@babel/runtime": "^7.11.2",

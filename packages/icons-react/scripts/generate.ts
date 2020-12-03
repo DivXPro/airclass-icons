@@ -1,4 +1,4 @@
-import * as allIconDefs from '@ant-design/icons-svg';
+import * as allIconDefs from '@airclass/icons-svg';
 import { IconDefinition } from '@ant-design/icons-svg/es/types';
 import * as path from 'path';
 import * as fs from 'fs';
@@ -40,7 +40,7 @@ async function generateIcons() {
 // DON NOT EDIT IT MANUALLY
 
 import * as React from 'react'
-import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
+import <%= svgIdentifier %>Svg from '@airclass/icons-svg/lib/asn/<%= svgIdentifier %>';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const <%= svgIdentifier %> = (

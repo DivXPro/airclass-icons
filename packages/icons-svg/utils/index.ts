@@ -14,7 +14,14 @@ export interface GetIdentifierType {
 
 export const getIdentifier: GetIdentifierType = pipe(
   ({ name, themeSuffix }: IdentifierMeta) =>
-    name + (themeSuffix ? `-${themeSuffix}` : ''),
+    trimNumber(name) + (themeSuffix ? `-${themeSuffix}` : ''),
   camelCase,
   upperFirst
 );
+
+function trimNumber(name: string) {
+  if (/^[0-9]./.test(name)) {
+    return `Remix${name}`;
+  }
+  return name;
+}
